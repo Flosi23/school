@@ -8,7 +8,7 @@ public class FibCalc {
   }
 
   private void printNumber(String n, String fib){
-    System.out.println("Fibonacci number for: " + n + " : " + fib);
+    System.out.println("Fibonacci number for: " + n + " : " + fib + "\n");
   }
 
   public int fibInt(int n){

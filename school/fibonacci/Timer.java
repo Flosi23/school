@@ -1,5 +1,4 @@
 package school.fibonacci;
-
 public class Timer {
   
   long startTime;
@@ -19,6 +18,6 @@ public class Timer {
   }
 
   private void printTime(long time) {
-    System.out.println("Time: " + time);
+    System.out.println("Time: " + time + " ns");
   }
 }
