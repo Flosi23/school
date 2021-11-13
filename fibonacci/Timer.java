@@ -1,4 +1,5 @@
 package school.fibonacci;
+
 public class Timer {
   
   long startTime;
