@@ -9,4 +9,4 @@
 
 ### 1 - Klassendiagramm
 
-![Pdf](./UMLClassDiagram.png)
+![Pdf](./UMLClassDiagram.svg)
