@@ -16,10 +16,6 @@ public class Node<T implements Comparable> extends AbstractNode{
         this.right = new Leaf();
     }
 
-    public T getData(){
-        return data;
-    }
-
     public boolean contains(T data){
         return false;
     }
@@ -34,5 +30,17 @@ public class Node<T implements Comparable> extends AbstractNode{
 
     public void remove(T data){
 
+    }
+
+    public T getData(){
+        return data;
+    }
+
+    public AbstractNode getLeft(){
+        return left;
+    }
+
+    public AbstractNode getRight(){
+        return right;
     }
 }
