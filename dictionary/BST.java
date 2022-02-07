@@ -15,7 +15,7 @@ public class BST<T implements Comparable>{
     }
 
     public void insert(T data){
-        root.insert(data);
+        root = root.insert(data);
     }
 
     public void remove(T data){

@@ -16,16 +16,36 @@ public class Node<T implements Comparable> extends AbstractNode{
         this.right = new Leaf();
     }
 
+    public void list(){
+        left.list();
+        System.out.println(data);
+        right.list();
+    }
+
     public boolean contains(T data){
+        if(data.equals(this.data)){
+            return true;
+        }
+        if(data.compareTo(this.data) < 0){
+            return left.contains(data);
+        }
+        if(data.compareTo(this.data) > 0){
+            return right.contains(data);
+        }
         return false;
     }
 
-    public void list(){
-
-    }
-
-    public void insert(T data){
-
+    public AbstractNode insert(T data){
+        if(data.equals(this.data)){
+            return this;
+        }
+        if(data.compareTo(this.data) < 0){
+            left = left.insert(data);
+        }
+        if(data.compareTo(this.data) > 0){
+            right = right.insert(data);
+        }
+        return this;
     }
 
     public void remove(T data){

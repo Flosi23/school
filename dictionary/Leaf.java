@@ -5,11 +5,11 @@ public class Leaf<T implements Comparable> extends AbstractNode{
     }
 
     public void list(){
-
+    
     }
 
-    public void insert(T data){
-
+    public AbstractNode insert(T data){
+        return new Node(data);
     }
 
     public void remove(T data){
