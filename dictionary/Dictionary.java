@@ -7,20 +7,32 @@ public class Dictionary {
     private final BST<Entry> db;
 
     public Dictionary(){
+        Entry.setForeignLanguage("English");
+        Entry.setForeignLanguage("German");
+        Entry.setExplanationString("Erklärung");
         db = new BST<>();
     }
 
-    public void add(Entry e){
-        db.insert(e);
+    public void add(String foreignWord, String translation, String explanation){
+        db.insert(new Entry(foreignWord, translation, explanation));
     }
 
-    public Entry searchForForeignWord(String foreignWord){
-        Entry searchQuery = new Entry(foreignWord, "");
-        return db.search(searchQuery);
+    public void remove(String word){
+        db.remove(new Entry(word, word))
     }
 
-    public Entry searchForTranslation(String translation){
-        Entry searchQuery = new Entry("", translation);
-        return db.search(searchQuery);
+    public void search(String query){
+        Entry result = db.search(new Entry(query, query));
+        printSearchResult(result);
+    }
+
+    private void printSearchResult(Entry result){
+        String string = "Kein Eintrag gefunden";
+
+        if(result != null){
+            result.toString();
+        }
+
+        System.out.prinln(string);
     }
 }

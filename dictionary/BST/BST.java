@@ -13,7 +13,13 @@ public class BST<T extends Comparable<T>>{
     }
 
     public T search(T data){
-        return root.findNode(data).getData();
+        Node<T> node = root.findNode(data);
+
+        if(node == null){
+            return null;
+        }
+
+        return node.getData();
     }
 
     public void list(){
