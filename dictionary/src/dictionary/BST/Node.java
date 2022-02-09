@@ -1,6 +1,6 @@
-package school.dictionary.BST;
+package dictionary.BST;
 
-import java.util.Objects;
+import java.util.List;
 
 public class Node<T extends Comparable<T>> extends AbstractNode<T> {
 
@@ -18,6 +18,12 @@ public class Node<T extends Comparable<T>> extends AbstractNode<T> {
         left.list();
         System.out.println(data);
         right.list();
+    }
+
+    public void addToList(List<T> list){
+        left.addToList(list);
+        list.add(data);
+        right.addToList(list);
     }
 
     protected Node<T> findNode(T data){
@@ -92,6 +98,10 @@ public class Node<T extends Comparable<T>> extends AbstractNode<T> {
         return 0;
     }
 
+    public T getData() {
+        return data;
+    }
+
     public void setLeft(AbstractNode<T> left) {
         this.left = left;
     }
@@ -108,7 +118,4 @@ public class Node<T extends Comparable<T>> extends AbstractNode<T> {
         return data.equals(node.data) && left.equals(node.left) && right.equals(node.right);
     }
 
-    public T getData() {
-        return data;
-    }
 }

@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>dictionary</OriginalElement>
+  <nodes>
+    <node x="1931.375" y="546.0">dictionary.BST.Node</node>
+    <node x="38.5" y="1604.0">dictionary.gui.controller.SearchController</node>
+    <node x="1634.0" y="261.0">dictionary.BST.Leaf</node>
+    <node x="622.5094975490179" y="1894.0">dictionary.gui.views.AdminView</node>
+    <node x="0.0" y="1939.0">dictionary.gui.views.SearchView</node>
+    <node x="1217.2389705882338" y="1861.0">dictionary.gui.model.AdminModel</node>
+    <node x="1465.0" y="1570.0">dictionary.Parser</node>
+    <node x="1170.152726715686" y="987.0">dictionary.Entry</node>
+    <node x="2331.0" y="0.0">dictionary.gui.controller.DictionaryController</node>
+    <node x="0.0" y="2536.0">dictionary.gui.views.RemoveDialog</node>
+    <node x="587.5" y="2280.0">dictionary.gui.controller.ResultController</node>
+    <node x="952.0" y="2236.0">dictionary.gui.controller.AdminController</node>
+    <node x="209.0" y="2536.0">dictionary.gui.views.AddDialog</node>
+    <node x="2024.0" y="1548.0">dictionary.BST.tests.BSTTest</node>
+    <node x="612.4889705882338" y="1604.0">dictionary.gui.views.EntryPanel</node>
+    <node x="1765.0" y="1514.0">dictionary.Dictionary</node>
+    <node x="1628.5723039215673" y="1927.0">dictionary.Main</node>
+    <node x="148.75" y="2291.0">dictionary.gui.views.DictionaryView</node>
+    <node x="1760.0" y="1086.0">dictionary.BST.BST</node>
+    <node x="292.50949754901785" y="1894.0">dictionary.gui.views.ResultView</node>
+    <node x="983.2389705882338" y="1927.0">dictionary.gui.model.ResultModel</node>
+    <node x="1825.9261642156844" y="0.0">dictionary.BST.AbstractNode</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.gui.views.AdminView" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="1117.5" y="2145.0" />
+      <point x="770.7389705882338" y="2145.0" />
+      <point x="770.7389705882338" y="2115.0" />
+      <point x="700.2594975490179" y="2115.0" />
+      <point x="-77.75" y="83.5" />
+    </edge>
+    <edge source="dictionary.Main" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="-41.75" y="-50.5" />
+      <point x="1670.3223039215673" y="1829.0" />
+      <point x="1443.75" y="1829.0" />
+      <point x="1443.5" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.views.AdminView" target="dictionary.gui.controller.AdminController" relationship="DEPENDENCY">
+      <point x="-77.75" y="83.5" />
+      <point x="700.2594975490179" y="2115.0" />
+      <point x="770.7389705882338" y="2115.0" />
+      <point x="770.7389705882338" y="2145.0" />
+      <point x="1117.5" y="2145.0" />
+      <point x="0.0" y="-127.5" />
+    </edge>
+    <edge source="dictionary.gui.model.AdminModel" target="dictionary.Dictionary" relationship="TO_ONE">
+      <point x="59.75" y="-116.5" />
+      <point x="1396.4889705882338" y="1839.0" />
+      <point x="1454.5" y="1839.0" />
+      <point x="1454.5" y="1819.0" />
+      <point x="1919.3333333333335" y="1819.0" />
+      <point x="1919.3333333333335" y="1799.0" />
+      <point x="1884.5" y="1799.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.gui.model.AdminModel" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="1117.5" y="2115.0" />
+      <point x="1276.9889705882338" y="2115.0" />
+      <point x="-59.75" y="116.5" />
+    </edge>
+    <edge source="dictionary.BST.Leaf" target="dictionary.BST.AbstractNode" relationship="GENERALIZATION">
+      <point x="0.0" y="-115.5" />
+      <point x="1748.5" y="240.0" />
+      <point x="1811.0" y="240.0" />
+      <point x="1811.0" y="230.0" />
+      <point x="1864.092830882351" y="230.0" />
+      <point x="-76.33333333333326" y="104.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.AdminView" relationship="DEPENDENCY">
+      <point x="-83.0" y="-72.5" />
+      <point x="231.75" y="2215.0" />
+      <point x="309.75" y="2215.0" />
+      <point x="309.75" y="2175.0" />
+      <point x="770.7389705882338" y="2175.0" />
+      <point x="770.7389705882338" y="2115.0" />
+      <point x="700.2594975490179" y="2115.0" />
+      <point x="-77.75" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.gui.model.ResultModel" relationship="TO_ONE">
+      <point x="87.66666666666663" y="-83.5" />
+      <point x="806.6666666666666" y="2215.0" />
+      <point x="766.5" y="2215.0" />
+      <point x="766.5" y="2205.0" />
+      <point x="1143.7389705882338" y="2205.0" />
+      <point x="53.5" y="50.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.SearchView" relationship="DEPENDENCY">
+      <point x="-83.0" y="-72.5" />
+      <point x="231.75" y="2215.0" />
+      <point x="309.75" y="2215.0" />
+      <point x="309.75" y="2145.0" />
+      <point x="65.25" y="2145.0" />
+      <point x="-65.25" y="38.5" />
+    </edge>
+    <edge source="dictionary.BST.tests.BSTTest" target="dictionary.BST.Node" relationship="CREATE">
+      <point x="0.0" y="-82.5" />
+      <point x="2155.0" y="955.0" />
+      <point x="2121.125" y="955.0" />
+      <point x="63.25" y="193.5" />
+    </edge>
+    <edge source="dictionary.BST.BST" target="dictionary.BST.AbstractNode" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="1884.5" y="240.0" />
+      <point x="1970.2594975490179" y="240.0" />
+      <point x="1970.2594975490179" y="230.0" />
+      <point x="1940.4261642156844" y="230.0" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="dictionary.gui.views.SearchView" target="dictionary.gui.controller.SearchController" relationship="TO_ONE">
+      <point x="65.25" y="-38.5" />
+      <point x="195.75" y="1839.0" />
+      <point x="176.5" y="1839.0" />
+      <point x="46.0" y="26.5" />
+    </edge>
+    <edge source="dictionary.Dictionary" target="dictionary.BST.BST" relationship="TO_ONE">
+      <point x="-59.75" y="-116.5" />
+      <point x="1824.75" y="1492.0" />
+      <point x="1822.25" y="1492.0" />
+      <point x="-62.25" y="127.5" />
+    </edge>
+    <edge source="dictionary.BST.AbstractNode" target="dictionary.BST.Node" relationship="DEPENDENCY">
+      <point x="0.0" y="104.5" />
+      <point x="1940.4261642156844" y="230.0" />
+      <point x="1970.2594975490179" y="230.0" />
+      <point x="1970.2594975490179" y="240.0" />
+      <point x="2089.5" y="240.0" />
+      <point x="31.625" y="-193.5" />
+    </edge>
+    <edge source="dictionary.Dictionary" target="dictionary.BST.BST" relationship="CREATE">
+      <point x="59.75" y="-116.5" />
+      <point x="1944.25" y="1492.0" />
+      <point x="1889.5" y="1492.0" />
+      <point x="1889.5" y="1462.0" />
+      <point x="1946.75" y="1462.0" />
+      <point x="62.25" y="127.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.gui.views.ResultView" relationship="DEPENDENCY">
+      <point x="-87.66666666666674" y="-83.5" />
+      <point x="631.3333333333333" y="2215.0" />
+      <point x="437.0" y="2215.0" />
+      <point x="437.0" y="2145.0" />
+      <point x="435.23897058823377" y="2145.0" />
+      <point x="435.23897058823377" y="2115.0" />
+      <point x="370.00949754901785" y="2115.0" />
+      <point x="-77.5" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.views.ResultView" target="dictionary.gui.controller.ResultController" relationship="DEPENDENCY">
+      <point x="-77.5" y="83.5" />
+      <point x="370.00949754901785" y="2115.0" />
+      <point x="435.23897058823377" y="2115.0" />
+      <point x="435.23897058823377" y="2145.0" />
+      <point x="437.0" y="2145.0" />
+      <point x="437.0" y="2215.0" />
+      <point x="631.3333333333333" y="2215.0" />
+      <point x="-87.66666666666674" y="-83.5" />
+    </edge>
+    <edge source="dictionary.BST.tests.BSTTest" target="dictionary.BST.BST" relationship="CREATE">
+      <point x="0.0" y="-82.5" />
+      <point x="2155.0" y="1472.0" />
+      <point x="1889.5" y="1472.0" />
+      <point x="1889.5" y="1462.0" />
+      <point x="1946.75" y="1462.0" />
+      <point x="62.25" y="127.5" />
+    </edge>
+    <edge source="dictionary.Main" target="dictionary.Dictionary" relationship="CREATE">
+      <point x="41.75" y="-50.5" />
+      <point x="1753.8223039215673" y="1839.0" />
+      <point x="1964.1666666666667" y="1839.0" />
+      <point x="79.66666666666674" y="116.5" />
+    </edge>
+    <edge source="dictionary.gui.model.ResultModel" target="dictionary.Dictionary" relationship="DEPENDENCY">
+      <point x="-53.5" y="-50.5" />
+      <point x="1036.7389705882338" y="1799.0" />
+      <point x="1187.2565870098033" y="1799.0" />
+      <point x="1187.2565870098033" y="1779.0" />
+      <point x="1804.8333333333333" y="1779.0" />
+      <point x="-79.66666666666674" y="116.5" />
+    </edge>
+    <edge source="dictionary.gui.model.ResultModel" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="-53.5" y="-50.5" />
+      <point x="1036.7389705882338" y="1789.0" />
+      <point x="1031.4889705882338" y="1789.0" />
+      <point x="1031.4889705882338" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.gui.model.AdminModel" relationship="TO_ONE">
+      <point x="110.33333333333326" y="-127.5" />
+      <point x="1227.8333333333333" y="2215.0" />
+      <point x="1334.375" y="2215.0" />
+      <point x="1334.375" y="2205.0" />
+      <point x="1396.4889705882338" y="2205.0" />
+      <point x="59.75" y="116.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="-87.66666666666674" y="-83.5" />
+      <point x="631.3333333333333" y="2215.0" />
+      <point x="437.0" y="2215.0" />
+      <point x="437.0" y="2125.0" />
+      <point x="282.0094975490176" y="2125.0" />
+      <point x="282.0094975490176" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.BST.BST" target="dictionary.BST.AbstractNode" relationship="TO_ONE">
+      <point x="83.0" y="-127.5" />
+      <point x="1967.5" y="965.0" />
+      <point x="2197.125" y="965.0" />
+      <point x="2197.125" y="240.0" />
+      <point x="2147.6875" y="240.0" />
+      <point x="2147.6875" y="230.0" />
+      <point x="2016.7594975490176" y="230.0" />
+      <point x="76.33333333333326" y="104.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.AdminView" relationship="TO_ONE">
+      <point x="83.0" y="-72.5" />
+      <point x="397.75" y="2215.0" />
+      <point x="319.75" y="2215.0" />
+      <point x="319.75" y="2185.0" />
+      <point x="780.7389705882338" y="2185.0" />
+      <point x="780.7389705882338" y="2115.0" />
+      <point x="855.7594975490179" y="2115.0" />
+      <point x="77.75" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="1117.5" y="2115.0" />
+      <point x="972.7389705882338" y="2115.0" />
+      <point x="972.7389705882338" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.gui.views.ResultView" relationship="TO_ONE">
+      <point x="87.66666666666663" y="-83.5" />
+      <point x="806.6666666666666" y="2215.0" />
+      <point x="766.5" y="2215.0" />
+      <point x="766.5" y="2155.0" />
+      <point x="450.23897058823377" y="2155.0" />
+      <point x="450.23897058823377" y="2115.0" />
+      <point x="525.0094975490179" y="2115.0" />
+      <point x="77.5" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.views.ResultView" target="dictionary.gui.controller.ResultController" relationship="TO_ONE">
+      <point x="77.5" y="83.5" />
+      <point x="525.0094975490179" y="2115.0" />
+      <point x="450.23897058823377" y="2115.0" />
+      <point x="450.23897058823377" y="2155.0" />
+      <point x="766.5" y="2155.0" />
+      <point x="766.5" y="2215.0" />
+      <point x="806.6666666666666" y="2215.0" />
+      <point x="87.66666666666663" y="-83.5" />
+    </edge>
+    <edge source="dictionary.BST.BST" target="dictionary.BST.Leaf" relationship="CREATE">
+      <point x="-83.0" y="-127.5" />
+      <point x="1801.5" y="965.0" />
+      <point x="1748.5" y="965.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.gui.views.AdminView" relationship="TO_ONE">
+      <point x="110.33333333333326" y="-127.5" />
+      <point x="1227.8333333333333" y="2215.0" />
+      <point x="1334.375" y="2215.0" />
+      <point x="1334.375" y="2135.0" />
+      <point x="780.7389705882338" y="2135.0" />
+      <point x="780.7389705882338" y="2115.0" />
+      <point x="855.7594975490179" y="2115.0" />
+      <point x="77.75" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.views.AdminView" target="dictionary.gui.controller.AdminController" relationship="TO_ONE">
+      <point x="77.75" y="83.5" />
+      <point x="855.7594975490179" y="2115.0" />
+      <point x="780.7389705882338" y="2115.0" />
+      <point x="780.7389705882338" y="2135.0" />
+      <point x="1334.375" y="2135.0" />
+      <point x="1334.375" y="2215.0" />
+      <point x="1227.8333333333333" y="2215.0" />
+      <point x="110.33333333333326" y="-127.5" />
+    </edge>
+    <edge source="dictionary.gui.model.AdminModel" target="dictionary.Entry" relationship="TO_MANY">
+      <point x="59.75" y="-116.5" />
+      <point x="1396.4889705882338" y="1839.0" />
+      <point x="1454.5" y="1839.0" />
+      <point x="1454.5" y="1482.0" />
+      <point x="1309.152726715686" y="1482.0" />
+      <point x="0.0" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.ResultView" relationship="TO_ONE">
+      <point x="83.0" y="-72.5" />
+      <point x="397.75" y="2215.0" />
+      <point x="319.75" y="2215.0" />
+      <point x="319.75" y="2165.0" />
+      <point x="450.23897058823377" y="2165.0" />
+      <point x="450.23897058823377" y="2115.0" />
+      <point x="525.0094975490179" y="2115.0" />
+      <point x="77.5" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.views.SearchView" target="dictionary.gui.controller.SearchController" relationship="DEPENDENCY">
+      <point x="-65.25" y="-38.5" />
+      <point x="65.25" y="1839.0" />
+      <point x="84.5" y="1839.0" />
+      <point x="-46.0" y="26.5" />
+    </edge>
+    <edge source="dictionary.BST.Node" target="dictionary.BST.Leaf" relationship="CREATE">
+      <point x="-94.875" y="-193.5" />
+      <point x="1963.0" y="524.0" />
+      <point x="1748.5" y="524.0" />
+      <point x="0.0" y="115.5" />
+    </edge>
+    <edge source="dictionary.BST.Leaf" target="dictionary.BST.Node" relationship="CREATE">
+      <point x="0.0" y="115.5" />
+      <point x="1748.5" y="524.0" />
+      <point x="1963.0" y="524.0" />
+      <point x="-94.875" y="-193.5" />
+    </edge>
+    <edge source="dictionary.gui.model.AdminModel" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="-59.75" y="-116.5" />
+      <point x="1276.9889705882338" y="1839.0" />
+      <point x="1259.2594975490179" y="1839.0" />
+      <point x="1259.2594975490179" y="1799.0" />
+      <point x="1269.7594975490179" y="1799.0" />
+      <point x="1269.7594975490179" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.views.AdminView" target="dictionary.gui.views.EntryPanel" relationship="DEPENDENCY">
+      <point x="0.0" y="-83.5" />
+      <point x="778.0094975490179" y="1839.0" />
+      <point x="610.4889705882338" y="1839.0" />
+      <point x="610.4889705882338" y="1829.0" />
+      <point x="652.9889705882338" y="1829.0" />
+      <point x="-40.5" y="26.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.SearchView" relationship="TO_ONE">
+      <point x="83.0" y="-72.5" />
+      <point x="397.75" y="2215.0" />
+      <point x="319.75" y="2215.0" />
+      <point x="319.75" y="2135.0" />
+      <point x="195.75" y="2135.0" />
+      <point x="65.25" y="38.5" />
+    </edge>
+    <edge source="dictionary.gui.views.DictionaryView" target="dictionary.gui.views.ResultView" relationship="DEPENDENCY">
+      <point x="-83.0" y="-72.5" />
+      <point x="231.75" y="2215.0" />
+      <point x="309.75" y="2215.0" />
+      <point x="309.75" y="2155.0" />
+      <point x="435.23897058823377" y="2155.0" />
+      <point x="435.23897058823377" y="2115.0" />
+      <point x="370.00949754901785" y="2115.0" />
+      <point x="-77.5" y="83.5" />
+    </edge>
+    <edge source="dictionary.gui.views.ResultView" target="dictionary.gui.views.EntryPanel" relationship="DEPENDENCY">
+      <point x="0.0" y="-83.5" />
+      <point x="447.50949754901785" y="1839.0" />
+      <point x="610.4889705882338" y="1839.0" />
+      <point x="610.4889705882338" y="1829.0" />
+      <point x="652.9889705882338" y="1829.0" />
+      <point x="-40.5" y="26.5" />
+    </edge>
+    <edge source="dictionary.BST.Node" target="dictionary.BST.AbstractNode" relationship="GENERALIZATION">
+      <point x="-31.625" y="-193.5" />
+      <point x="2026.25" y="514.0" />
+      <point x="1873.5" y="514.0" />
+      <point x="1873.5" y="240.0" />
+      <point x="1811.0" y="240.0" />
+      <point x="1811.0" y="230.0" />
+      <point x="1864.092830882351" y="230.0" />
+      <point x="-76.33333333333326" y="104.5" />
+    </edge>
+    <edge source="dictionary.BST.BST" target="dictionary.BST.Node" relationship="DEPENDENCY">
+      <point x="0.0" y="-127.5" />
+      <point x="1884.5" y="955.0" />
+      <point x="1994.625" y="955.0" />
+      <point x="-63.25" y="193.5" />
+    </edge>
+    <edge source="dictionary.Parser" target="dictionary.Entry" relationship="CREATE">
+      <point x="0.0" y="-60.5" />
+      <point x="1605.0" y="1472.0" />
+      <point x="1401.8193933823527" y="1472.0" />
+      <point x="92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.gui.model.ResultModel" relationship="DEPENDENCY">
+      <point x="-87.66666666666674" y="-83.5" />
+      <point x="631.3333333333333" y="2215.0" />
+      <point x="437.0" y="2215.0" />
+      <point x="437.0" y="2125.0" />
+      <point x="1036.7389705882338" y="2125.0" />
+      <point x="-53.5" y="50.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.AdminController" target="dictionary.gui.views.EntryPanel" relationship="CREATE">
+      <point x="-110.33333333333326" y="-127.5" />
+      <point x="1007.1666666666667" y="2185.0" />
+      <point x="944.0094975490179" y="2185.0" />
+      <point x="944.0094975490179" y="1829.0" />
+      <point x="733.9889705882338" y="1829.0" />
+      <point x="40.5" y="26.5" />
+    </edge>
+    <edge source="dictionary.Main" target="dictionary.Parser" relationship="DEPENDENCY">
+      <point x="-41.75" y="-50.5" />
+      <point x="1670.3223039215673" y="1829.0" />
+      <point x="1443.75" y="1829.0" />
+      <point x="1443.75" y="1769.0" />
+      <point x="1605.0" y="1769.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="dictionary.gui.controller.ResultController" target="dictionary.gui.views.EntryPanel" relationship="CREATE">
+      <point x="0.0" y="-83.5" />
+      <point x="719.0" y="2195.0" />
+      <point x="944.0094975490179" y="2195.0" />
+      <point x="944.0094975490179" y="1829.0" />
+      <point x="733.9889705882338" y="1829.0" />
+      <point x="40.5" y="26.5" />
+    </edge>
+    <edge source="dictionary.Dictionary" target="dictionary.Entry" relationship="CREATE">
+      <point x="59.75" y="-116.5" />
+      <point x="1944.25" y="1492.0" />
+      <point x="1889.5" y="1492.0" />
+      <point x="1889.5" y="1482.0" />
+      <point x="1605.0" y="1482.0" />
+      <point x="1605.0" y="1472.0" />
+      <point x="1401.8193933823527" y="1472.0" />
+      <point x="92.66666666666674" y="226.5" />
+    </edge>
+    <edge source="dictionary.gui.model.ResultModel" target="dictionary.Dictionary" relationship="TO_ONE">
+      <point x="53.5" y="-50.5" />
+      <point x="1143.7389705882338" y="1809.0" />
+      <point x="1919.3333333333335" y="1809.0" />
+      <point x="1919.3333333333335" y="1799.0" />
+      <point x="1884.5" y="1799.0" />
+      <point x="0.0" y="116.5" />
+    </edge>
+    <edge source="dictionary.BST.Node" target="dictionary.BST.AbstractNode" relationship="TO_ONE">
+      <point x="94.875" y="-193.5" />
+      <point x="2152.75" y="524.0" />
+      <point x="2142.4375" y="524.0" />
+      <point x="2142.4375" y="240.0" />
+      <point x="2147.6875" y="240.0" />
+      <point x="2147.6875" y="230.0" />
+      <point x="2016.7594975490176" y="230.0" />
+      <point x="76.33333333333326" y="104.5" />
+    </edge>
+    <edge source="dictionary.gui.model.AdminModel" target="dictionary.Dictionary" relationship="DEPENDENCY">
+      <point x="-59.75" y="-116.5" />
+      <point x="1276.9889705882338" y="1839.0" />
+      <point x="1259.2594975490179" y="1839.0" />
+      <point x="1259.2594975490179" y="1789.0" />
+      <point x="1187.2565870098033" y="1789.0" />
+      <point x="1187.2565870098033" y="1779.0" />
+      <point x="1804.8333333333333" y="1779.0" />
+      <point x="-79.66666666666674" y="116.5" />
+    </edge>
+    <edge source="dictionary.gui.views.EntryPanel" target="dictionary.Entry" relationship="DEPENDENCY">
+      <point x="0.0" y="-26.5" />
+      <point x="693.4889705882338" y="1492.0" />
+      <point x="1038.120557598037" y="1492.0" />
+      <point x="1038.120557598037" y="1482.0" />
+      <point x="1216.4860600490192" y="1482.0" />
+      <point x="-92.66666666666674" y="226.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.25519262417903044" showDependencies="true" x="1057.7195958294797" y="1403.3428793644634" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,4 +1,6 @@
-package school.dictionary.BST;
+package dictionary.BST;
+
+import java.util.List;
 
 public class Leaf<T extends Comparable<T>> extends AbstractNode<T> {
 
@@ -11,6 +13,8 @@ public class Leaf<T extends Comparable<T>> extends AbstractNode<T> {
     }
 
     public void list(){}
+
+    public void addToList(List<T> list){}
 
     public AbstractNode<T> insert(T data){
         return new Node<>(data);

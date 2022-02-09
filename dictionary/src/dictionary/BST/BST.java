@@ -1,4 +1,7 @@
-package school.dictionary.BST;
+package dictionary.BST;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class BST<T extends Comparable<T>>{
 
@@ -24,6 +27,16 @@ public class BST<T extends Comparable<T>>{
 
     public void list(){
         root.list();
+    }
+
+    public List<T> toList(){
+        List<T> list = new LinkedList<>();
+        root.addToList(list);
+        return list;
+    }
+
+    public int size(){
+        return toList().size();
     }
 
     public void insert(T data){
