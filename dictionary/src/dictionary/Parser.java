@@ -3,6 +3,7 @@ package dictionary;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -32,6 +33,30 @@ public class Parser {
                 });
 
         return entries;
+    }
+
+    public static List<Entry> parseCSVFiles(String folder){
+        List<Entry> entries = new LinkedList<>();
+
+        for(String file : getFilesInFolder(folder)){
+            entries.addAll(parseCSVFile(file));
+        }
+
+        return entries;
+    }
+
+    private static List<String> getFilesInFolder(String folder){
+        List<String> fileNames = new LinkedList<>();
+
+        try (Stream<Path> paths = Files.walk(Paths.get(getAbsolutePath(folder)))) {
+            paths
+                    .filter(Files::isRegularFile)
+                    .forEach(path -> fileNames.add(folder + "/" + path.getFileName()));
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+        return fileNames;
     }
 
     private static String getAbsolutePath(String filePath){

@@ -1,8 +1,6 @@
 package dictionary.gui;
 
 import dictionary.Dictionary;
-import dictionary.Entry;
-import dictionary.Parser;
 import dictionary.gui.controller.AdminController;
 import dictionary.gui.controller.DictionaryController;
 import dictionary.gui.controller.ResultController;
@@ -13,14 +11,12 @@ import dictionary.gui.views.AdminView;
 import dictionary.gui.views.DictionaryView;
 import dictionary.gui.views.ResultView;
 import dictionary.gui.views.SearchView;
-
 import javax.swing.*;
-import java.util.Collections;
-import java.util.List;
 
 public class StartGUI {
 
 
+    private static final String FOLDER_PATH = "csvFiles";
     /**
      * main()-Methode, die die Suchmaschinen-GUI ausführt
      * @param args
@@ -31,7 +27,7 @@ public class StartGUI {
 
     public static void startGUI() {
         // Erzeugen einer LinkedDocumentCollection
-        Dictionary dictionary = Dictionary.fromCSVFile();
+        Dictionary dictionary = Dictionary.fromCSVFiles(FOLDER_PATH);
 
         // Erzeugen der beiden Model-Objekte
         AdminModel adminModel = new AdminModel(dictionary);

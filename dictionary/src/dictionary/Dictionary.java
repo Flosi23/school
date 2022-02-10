@@ -2,14 +2,22 @@ package dictionary;
 
 import dictionary.BST.BST;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
 public class Dictionary {
 
-    private static final String FILE_PATH = "vocabulary.csv";
-
+    /**
+     * Damit man sowohl nach dem Fremdwort als auch nach der Übersetzung
+     * suchen kann, ist es erfoderlich 2 BSTs zu erstellen, wo in dem einem
+     * nach dem Fremdwort und in dem anderem nach der Übersetzung sortiert wird
+     *
+     * Beim einfügen sowie beim entfernen in das Wörterbuch wird in beide Bäume eingefügt /
+     * aus beiden Bäumen entfernt
+     */
     private final BST<Entry> foreignDB;
     private final BST<Entry> translatedDB;
 
@@ -64,9 +72,9 @@ public class Dictionary {
         return Objects.equals(foreignDB, that.foreignDB) && Objects.equals(translatedDB, that.translatedDB);
     }
 
-    public static Dictionary fromCSVFile(){
+    public static Dictionary fromCSVFiles(String folder){
         Dictionary dictionary = new Dictionary();
-        List<Entry> entries = Parser.parseCSVFile(FILE_PATH);
+        List<Entry> entries = Parser.parseCSVFiles(folder);
 
         Collections.shuffle(entries);
 
