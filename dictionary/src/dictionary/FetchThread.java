@@ -7,6 +7,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class FetchThread extends Thread{
 
@@ -43,44 +45,28 @@ public class FetchThread extends Thread{
     }
 
     public static void fetchWords(Dictionary dictionary, List<String> words){
-        int numThreads = Math.min(NUMBER_OF_THREADS, words.size());
+        int numThreads = Math.min(NUMBER_OF_THREADS, Math.max(1, words.size()));
+
+        System.out.println(numThreads);
 
         FetchThread[] fetchThreads = new FetchThread[numThreads];
         List<List<String>> parts = chopIntoParts(words, numThreads);
 
-        for(int i = 0; i < numThreads;i++){
+        for(int i = 0; i < parts.size();i++){
             fetchThreads[i] = new FetchThread(parts.get(i), dictionary);
         }
 
         for(Thread thread: fetchThreads){
+            if(thread == null){
+                continue;
+            }
             thread.start();
         }
     }
 
-
-    public static <T>List<List<T>> chopIntoParts( final List<T> ls, final int iParts )
-    {
-        final List<List<T>> lsParts = new LinkedList<>();
-        final int iChunkSize = ls.size() / iParts;
-        int iLeftOver = ls.size() % iParts;
-        int iTake = iChunkSize;
-
-        for( int i = 0, iT = ls.size(); i < iT; i += iTake )
-        {
-            if( iLeftOver > 0 )
-            {
-                iLeftOver--;
-
-                iTake = iChunkSize + 1;
-            }
-            else
-            {
-                iTake = iChunkSize;
-            }
-
-            lsParts.add( new LinkedList<>( ls.subList( i, Math.min( iT, i + iTake ) ) ) );
-        }
-
-        return lsParts;
+    public static <T> List<List<T>> chopIntoParts(List<T> collection, int batchSize) {
+        return IntStream.iterate(0, i -> i < collection.size(), i -> i + batchSize)
+                .mapToObj(i -> collection.subList(i, Math.min(i + batchSize, collection.size())))
+                .collect(Collectors.toList());
     }
 }
