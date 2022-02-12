@@ -1,7 +1,7 @@
 package dictionary.gui.model;
 
-import dictionary.Dictionary;
-import dictionary.Entry;
+import dictionary.dictionary.Dictionary;
+import dictionary.dictionary.Entry;
 
 import java.util.LinkedList;
 import java.util.List;

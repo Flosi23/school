@@ -1,7 +1,7 @@
-package dictionary.BST.tests;
+package dictionary.dictionary.BST.tests;
 
-import dictionary.BST.BST;
-import dictionary.BST.Node;
+import dictionary.dictionary.BST.BST;
+import dictionary.dictionary.BST.Node;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,7 +55,7 @@ class BSTTest {
 
     /**
      * Stelle sicher:
-     *      1. dass korrekt in den dictionary.BST eingefügt wird
+     *      1. dass korrekt in den dictionary.dictionary.BST eingefügt wird
      *      2. dass keine Duplikate möglich sind
      */
     @Test

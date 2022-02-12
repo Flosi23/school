@@ -1,6 +1,6 @@
 package dictionary.gui.controller;
 
-import dictionary.Entry;
+import dictionary.dictionary.Entry;
 import dictionary.gui.model.ResultModel;
 import dictionary.gui.views.EntryPanel;
 import dictionary.gui.views.ResultView;

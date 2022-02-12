@@ -1,4 +1,4 @@
-package dictionary.BST;
+package dictionary.dictionary.BST;
 
 import java.util.LinkedList;
 import java.util.List;

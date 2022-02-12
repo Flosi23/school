@@ -1,4 +1,4 @@
-package dictionary;
+package dictionary.dictionary;
 
 import java.util.Locale;
 
@@ -86,5 +86,27 @@ public class Entry implements Comparable<Entry>{
         return "\n" + foreignLanguage + ": " + foreignWord + "\n"
         + translationLanguage + ": " + translation + "\n"
         + explanationString + ": " + explanation + "\n";
+    }
+
+    public String toCSVFormat(){
+        return foreignWord + ";" + translation + ";" + explanation;
+    }
+
+    public static Entry fromCSVFormat(String line){
+        String[] split = line.split(";");
+
+        if(split.length < 2 || split.length > 3){
+            throw new IllegalArgumentException("Line must have 2 or 3 columns");
+        }
+
+        String[] englishWords = split[0].split(",");
+        String[] germanWords = split[1].split(",");
+
+        if(split.length == 3){
+            String explanation = split[0];
+            return new Entry(englishWords[0], germanWords[0], explanation, true);
+        } else {
+            return new Entry(englishWords[0], germanWords[0], true);
+        }
     }
 }

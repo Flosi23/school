@@ -1,6 +1,8 @@
-package dictionary;
+package dictionary.dictionary;
 
-import dictionary.BST.BST;
+import dictionary.dictionary.BST.BST;
+import dictionary.files.cache.Cache;
+import dictionary.util.ReadWriteLock;
 
 import java.util.Collections;
 import java.util.List;
@@ -41,6 +43,18 @@ public class Dictionary {
         RW.stopRead();
     }
 
+    public boolean contains(Entry entry){
+        RW.startRead();
+
+        boolean containsForeign = foreignDB.contains(entry);
+        boolean containsTranslate = translatedDB.contains(entry);
+
+        synchronized (this) {
+            RW.stopRead();
+            return containsForeign || containsTranslate;
+        }
+    }
+
     public List<Entry> toList(){
         RW.startRead();
 
@@ -61,6 +75,10 @@ public class Dictionary {
             RW.stopRead();
             return size;
         }
+    }
+
+    public void add(Entry entry){
+        add(entry.getForeignWord(), entry.getTranslation(), entry.getExplanation());
     }
 
     public void add(String foreignWord, String translation, String explanation){
@@ -112,60 +130,17 @@ public class Dictionary {
         return Objects.equals(foreignDB, that.foreignDB) && Objects.equals(translatedDB, that.translatedDB);
     }
 
-    public static Dictionary fromCSVFiles(String folder){
+    public static Dictionary fromCache(){
         Dictionary dictionary = new Dictionary();
-        List<Entry> entries = Parser.parseCSVFiles(folder);
+        List<Entry> entries = Cache.getCachedEntries();
 
         Collections.shuffle(entries);
 
         for(Entry entry : entries){
-            dictionary.add(entry.getForeignWord(), entry.getTranslation(), entry.getExplanation());
+            dictionary.add(entry);
         }
 
         return dictionary;
     }
 
-    public static class ReadWriteLock{
-
-        /**
-         * < 0 -> reading
-         * > 0 -> writing
-         * = 0 -> no thread doing anything
-         */
-        private int threadCount;
-
-        public ReadWriteLock(){
-            threadCount = 0;
-        }
-
-        public synchronized void startWrite(){
-            while(threadCount != 0){
-                try{
-                   wait();
-                } catch (InterruptedException ignored){}
-            }
-            threadCount--;
-        }
-
-        public synchronized void stopWrite(){
-            threadCount = 0;
-            notifyAll();
-        }
-
-        public synchronized void startRead(){
-            while(threadCount < 0){
-                try {
-                   wait();
-                } catch (InterruptedException ignored){}
-            }
-            threadCount++;
-        }
-
-        public synchronized void stopRead(){
-            threadCount--;
-            if(threadCount == 0){
-                notifyAll();
-            }
-        }
-    }
 }

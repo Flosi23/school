@@ -1,6 +1,6 @@
 package dictionary.gui.views;
 
-import dictionary.Entry;
+import dictionary.dictionary.Entry;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

@@ -1,7 +1,8 @@
 package dictionary.gui.model;
 
-import dictionary.Dictionary;
-import dictionary.Entry;
+import dictionary.dictionary.Dictionary;
+import dictionary.dictionary.Entry;
+import dictionary.files.cache.Cache;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -40,6 +41,7 @@ public class AdminModel {
 
     public void add(String foreignWord, String translation, String explanation){
         dictionary.add(foreignWord, translation, explanation);
+        Cache.cache(new Entry(foreignWord, translation, explanation, true));
     }
 
     public void remove(String query){

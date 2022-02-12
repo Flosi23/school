@@ -1,6 +1,6 @@
 package dictionary.gui.controller;
 
-import dictionary.Entry;
+import dictionary.dictionary.Entry;
 import dictionary.gui.model.AdminModel;
 import dictionary.gui.views.AdminView;
 import dictionary.gui.views.EntryPanel;
