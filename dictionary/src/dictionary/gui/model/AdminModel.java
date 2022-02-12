@@ -2,7 +2,7 @@ package dictionary.gui.model;
 
 import dictionary.dictionary.Dictionary;
 import dictionary.dictionary.Entry;
-import dictionary.files.cache.Cache;
+import dictionary.Cache;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class AdminModel {
     private List<Entry> entries;
     private int numberOfLoadedEntries;
 
-    private static final int BATCH_SIZE = 20;
+    private static final int BATCH_SIZE = 100;
 
     public AdminModel(Dictionary dictionary){
         this.dictionary = dictionary;
@@ -37,6 +37,7 @@ public class AdminModel {
 
     public void loadListOfAllEntries(){
         entries = dictionary.toList();
+        numberOfLoadedEntries = 0;
     }
 
     public void add(String foreignWord, String translation, String explanation){

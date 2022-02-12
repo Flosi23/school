@@ -103,7 +103,7 @@ public class Entry implements Comparable<Entry>{
         String[] germanWords = split[1].split(",");
 
         if(split.length == 3){
-            String explanation = split[0];
+            String explanation = split[2];
             return new Entry(englishWords[0], germanWords[0], explanation, true);
         } else {
             return new Entry(englishWords[0], germanWords[0], true);

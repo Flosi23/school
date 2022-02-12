@@ -1,4 +1,4 @@
-package dictionary.files.cache;
+package dictionary;
 
 import dictionary.dictionary.Dictionary;
 import dictionary.dictionary.Entry;
@@ -49,6 +49,11 @@ public class Cache {
     public static boolean contains(Entry entry){
         lazy();
         return cachedEntries.contains(entry);
+    }
+
+    public static boolean contains(String query){
+        lazy();
+        return cachedEntries.search(query) != null;
     }
 
     public synchronized static void cache(Entry entry){

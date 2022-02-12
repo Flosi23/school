@@ -1,7 +1,7 @@
 package dictionary.dictionary;
 
 import dictionary.dictionary.BST.BST;
-import dictionary.files.cache.Cache;
+import dictionary.Cache;
 import dictionary.util.ReadWriteLock;
 
 import java.util.Collections;

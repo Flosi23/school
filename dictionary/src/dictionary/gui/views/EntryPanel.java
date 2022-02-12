@@ -9,6 +9,8 @@ import java.awt.*;
 
 public class EntryPanel extends JPanel {
 
+    private static final int MAX_CHARS = 30;
+
     public EntryPanel(Entry e){
         JPanel paddingContainer = new JPanel();
         paddingContainer.setLayout(new BoxLayout(paddingContainer, BoxLayout.PAGE_AXIS));
@@ -37,4 +39,5 @@ public class EntryPanel extends JPanel {
         add(borderContainer);
         setBorder(new EmptyBorder(5,0,5,0));
     }
+
 }
