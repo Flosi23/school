@@ -64,7 +64,7 @@ public class Node<T extends Comparable<T>> extends AbstractNode<T> {
                 return new Leaf<>();
             }
             if(numberOfChildren == 1){
-                return left instanceof Leaf<T> ? right : left;
+                return left instanceof Leaf ? right : left;
             }
             if(numberOfChildren == 2){
                 this.data = right.getMin(this.data);
@@ -86,8 +86,8 @@ public class Node<T extends Comparable<T>> extends AbstractNode<T> {
     }
 
     private int numberOfChildren(){
-        boolean isLeftLeaf = left instanceof Leaf<T>;
-        boolean isRightLeaf = right instanceof Leaf<T>;
+        boolean isLeftLeaf = left instanceof Leaf;
+        boolean isRightLeaf = right instanceof Leaf;
 
         if(!isLeftLeaf && !isRightLeaf){
             return 2;

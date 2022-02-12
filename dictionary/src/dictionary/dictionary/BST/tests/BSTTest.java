@@ -20,7 +20,7 @@ class BSTTest {
     }
 
     @Test
-    void equals(){
+    public void equals(){
         BST<Integer> tree1 = new BST<>();
         Node<Integer> root1 = new Node<>(10);
         tree1.setRoot(root1);
@@ -42,7 +42,7 @@ class BSTTest {
     }
 
     @Test
-    void contains() {
+    public void contains() {
         BST<Integer> bst = createBST(12, 1,4,6,8,15,19,13);
         assertTrue(bst.contains(4));
         assertTrue(bst.contains(19));
@@ -59,7 +59,7 @@ class BSTTest {
      *      2. dass keine Duplikate möglich sind
      */
     @Test
-    void insert() {
+    public void insert() {
         BST<Integer> expected = new BST<>();
         Node<Integer> root = new Node<>(8);
         expected.setRoot(root);
@@ -77,7 +77,7 @@ class BSTTest {
     }
 
     @Test
-    void remove() {
+    public void remove() {
         BST<Integer> actual = createBST(12, 11,13);
         BST<Integer> expected = createBST(12, 11);
         actual.remove(13);
