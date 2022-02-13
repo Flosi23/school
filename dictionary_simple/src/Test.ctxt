@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Test
+comment1.params=
+comment1.target=Test()
+comment2.params=ele
+comment2.target=void\ suchen(Datenelement)
+comment3.params=
+comment3.target=void\ inorderAusgabe()
+comment4.params=ele
+comment4.target=void\ einfuegen(Datenelement)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6

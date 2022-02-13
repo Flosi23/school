@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Binaerbaum
+comment1.params=
+comment1.target=Binaerbaum()
+comment2.params=w
+comment2.target=void\ wurzelSetzen(Baumelement)
+comment3.params=
+comment3.target=Baumelement\ wurzelGeben()
+comment4.params=s
+comment4.target=void\ suchen(int)
+comment5.params=
+comment5.target=void\ inorder()
+numComments=6

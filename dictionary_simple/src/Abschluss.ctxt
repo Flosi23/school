@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Abschluss
+comment1.params=nl
+comment1.target=void\ naechsterLinksSetzen(Baumelement)
+comment2.params=nr
+comment2.target=void\ naechsterRechtsSetzen(Baumelement)
+comment3.params=
+comment3.target=Baumelement\ naechsterLinksGeben()
+comment4.params=
+comment4.target=Baumelement\ naechsterRechtsGeben()
+comment5.params=ele
+comment5.target=boolean\ suchen(Datenelement)
+comment6.params=
+comment6.target=void\ inorder()
+comment7.params=ele
+comment7.target=Baumelement\ einfuegen(Datenelement)
+numComments=8

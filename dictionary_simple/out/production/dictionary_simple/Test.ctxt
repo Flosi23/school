@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Test
+comment1.params=
+comment1.target=Test()
+comment2.params=i
+comment2.target=void\ suchen(int)
+comment3.params=
+comment3.target=void\ inorderAusgabe()
+numComments=4

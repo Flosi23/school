@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Datenknoten
+comment1.params=l\ r\ i
+comment1.target=Datenknoten(Baumelement,\ Baumelement,\ Datenelement)
+comment2.params=nl
+comment2.target=void\ naechsterLinksSetzen(Baumelement)
+comment3.params=nr
+comment3.target=void\ naechsterRechtsSetzen(Baumelement)
+comment4.params=
+comment4.target=Baumelement\ naechsterLinksGeben()
+comment5.params=
+comment5.target=Baumelement\ naechsterRechtsGeben()
+comment6.params=s
+comment6.target=boolean\ suchen(int)
+comment7.params=
+comment7.target=void\ inorder()
+numComments=8

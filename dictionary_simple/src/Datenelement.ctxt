@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Datenelement
+comment1.params=fremdwort\ uebersetzung\ erklaerung
+comment1.target=Datenelement(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ datenAusgeben()
+comment3.params=ele
+comment3.target=int\ compareTo(Datenelement)
+numComments=4

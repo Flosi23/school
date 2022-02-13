@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=n
+comment0.target=Datenelement(int)
+comment1.params=
+comment1.target=void\ datenAusgeben()
+comment2.params=
+comment2.target=int\ nummerGeben()
+numComments=3
