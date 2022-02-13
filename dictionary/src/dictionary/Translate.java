@@ -3,6 +3,8 @@ package dictionary;
 import dictionary.dictionary.Entry;
 import dictionary.util.Http;
 
+import java.nio.ByteBuffer;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Pattern;
 
 public class Translate {
@@ -12,6 +14,7 @@ public class Translate {
         var regexp = Pattern.compile("\"translatedText\":\"(?<translation>.*?)\"").matcher(response);
         if (!regexp.find())
             return null;
+
         return regexp.group("translation");
     }
 
